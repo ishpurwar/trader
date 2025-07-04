@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface GoogleSignInButtonProps {
   onClick: () => void;
   loading: boolean;
