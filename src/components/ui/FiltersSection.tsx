@@ -38,7 +38,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
               onClick={() => onPortfolioTabChange('all')}
               className={`px-4 py-2 ${
                 portfolioTab === 'all' 
-                  ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                  ? 'text-green-400 border-b-2 border-green-400' 
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -48,7 +48,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
               onClick={() => onPortfolioTabChange('favorites')}
               className={`px-4 py-2 ${
                 portfolioTab === 'favorites' 
-                  ? 'text-yellow-400 border-b-2 border-yellow-400' 
+                  ? 'text-green-400 border-b-2 border-green-400' 
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -58,7 +58,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
         </div>
         <button
           onClick={onDailyPicksClick}
-          className="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition-colors flex items-center gap-2"
+          className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition-colors flex items-center gap-2"
         >
           <Zap className="w-4 h-4" />
           Daily Picks
@@ -70,7 +70,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
         <select
           value={timeFilter}
           onChange={(e) => onTimeFilterChange(e.target.value)}
-          className="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-white"
+          className="bg-gray-900/40 border outline-0 border-gray-700 rounded px-4 py-2 text-white"
         >
           <option value="30Days">30 Days</option>
           <option value="7Days">7 Days</option>
@@ -80,7 +80,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
         <select
           value={pnlFilter}
           onChange={(e) => onPnlFilterChange(e.target.value)}
-          className="bg-gray-800 border border-gray-700 rounded px-4 py-2 text-white"
+          className="bg-gray-900/40 outline-0 border border-gray-700 rounded px-4 py-2 text-white"
         >
           <option value="PnL">PnL</option>
           <option value="ROI">ROI</option>
@@ -92,7 +92,7 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
             type="checkbox"
             checked={smartFilter}
             onChange={(e) => onSmartFilterChange(e.target.checked)}
-            className="rounded"
+            className="rounded-2xl bg-gray-900/40 border border-gray-700 w-4 h-4 cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           Smart Filter
         </label>
@@ -105,10 +105,10 @@ const FiltersSection: React.FC<FiltersSectionProps> = ({
               placeholder="Trader's Name"
               value={searchQuery}
               onChange={(e) => onSearchQueryChange(e.target.value)}
-              className="bg-gray-800 border border-gray-700 rounded pl-10 pr-4 py-2 text-white w-64"
+              className="bg-gray-900/40 outline-0 border border-gray-700 rounded pl-10 pr-4 py-2 text-white w-64"
             />
           </div>
-          <button className="p-2 bg-gray-800 border border-gray-700 rounded hover:bg-gray-700">
+          <button className="p-2 bg-gray-900/40 outline-0 border border-gray-700 rounded hover:bg-gray-700">
             <Filter className="w-4 h-4" />
           </button>
         </div>

@@ -22,15 +22,12 @@ export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div >
       {/* Header */}
-      <Header onShowAuthModal={() => setShowAuthModal(true)} />
+    
       
       {/* Navigation */}
-      <Navigation
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
+     
       
       {/* Lead Trader Banner */}
       <LeadTraderBanner />
@@ -46,7 +43,7 @@ export default function Home() {
           <div className="flex items-center gap-4 text-sm">
             <Play className="w-4 h-4 text-gray-400" />
             <span className="text-gray-400">
-              Binance Futures Copy Trading Upgrades the Lead Trader Growth Plan
+              Trader Futures Copy Trading Upgrades the Lead Trader Growth Plan
             </span>
           </div>
         </div>

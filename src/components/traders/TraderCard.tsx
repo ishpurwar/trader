@@ -23,7 +23,7 @@ export const TraderCard: React.FC<TraderCardProps> = ({ trader, isCompact = fals
   };
 
   return (
-    <div className={`bg-gray-800 rounded-lg p-4 border border-gray-700 ${trader.highlighted ? 'ring-2 ring-yellow-500' : ''}`}>
+    <div className={`bg-gray-950 rounded-lg p-4 border border-gray-700 ${trader.highlighted ? 'ring-2 ring-green-500' : ''}`}>
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-lg">
@@ -32,15 +32,11 @@ export const TraderCard: React.FC<TraderCardProps> = ({ trader, isCompact = fals
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-white font-medium">{trader.name}</h3>
-              {trader.isApi && <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">API</span>}
             </div>
-            <div className="flex items-center gap-1 text-sm text-gray-400">
-              <Users className="w-3 h-3" />
-              {trader.followers}
-            </div>
+            
           </div>
         </div>
-        <Star className="w-5 h-5 text-gray-400 hover:text-yellow-400 cursor-pointer" />
+        <Star className="w-5 h-5 text-gray-400 hover:text-green-400 cursor-pointer" />
       </div>
 
       {!isCompact && (
@@ -76,7 +72,7 @@ export const TraderCard: React.FC<TraderCardProps> = ({ trader, isCompact = fals
         </button>
         <button
           onClick={handleCopy}
-          className="flex-1 bg-yellow-500 text-black py-2 px-4 rounded hover:bg-yellow-400 transition-colors font-medium"
+          className="flex-1 bg-green-500 text-black py-2 px-4 rounded hover:bg-green-400 transition-colors font-medium"
         >
           {isCompact ? 'Quick Copy' : 'Copy'}
         </button>

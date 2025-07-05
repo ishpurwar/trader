@@ -21,10 +21,10 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-gray-900 rounded-lg p-8 max-w-md w-full mx-4 border border-gray-700">
+    <div className="fixed inset-0 bg-black/80 bg-opacity-50 flex items-center justify-center z-50">
+     <div className="bg-gradient-to-br from-slate-800/60 to-slate-950/80 backdrop-blur-3xl border border-slate-400/20 rounded-xl p-8 max-w-md w-full mx-4 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.6),0_10px_10px_-5px_rgba(0,0,0,0.4)]">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-white">Sign In to Binance</h2>
+          <h2 className="text-2xl font-bold text-white">Sign In to Trader</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white p-2"
@@ -48,11 +48,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
           <div className="text-center text-sm text-gray-500">
             <p>
               By signing in, you agree to our{' '}
-              <a href="#" className="text-yellow-400 hover:text-yellow-300">
+              <a href="#" className="text-green-400 hover:text-green-300">
                 Terms of Service
               </a>{' '}
               and{' '}
-              <a href="#" className="text-yellow-400 hover:text-yellow-300">
+              <a href="#" className="text-green-400 hover:text-green-300">
                 Privacy Policy
               </a>
             </p>
